@@ -1,0 +1,42 @@
+.rc-slider-rail {
+    background-color: #ccc; /* 轨道颜色 */
+    height: 10px; /* 轨道高度 */
+    border-radius: 5px; /* 轨道圆角 */
+    border: 2px solid #000; /* 添加黑色边框 */
+}
+
+.rc-slider-track {
+    background-color: #ccc; /* 滑块轨迹颜色 */
+    height: 10px; /* 滑块轨迹高度 */
+    border-radius: 5px; /* 滑块轨迹圆角 */
+    border: 2px solid #000; /* 添加黑色边框 */
+}
+
+.rc-slider-handle {
+    background-color: #FFC700; /* 滑块颜色 */
+    border: 2px solid black; /* 滑块边框 */
+    width: 30px; /* 滑块宽度 */
+    height: 20px; /* 滑块高度 */
+    margin-top: -5px; /* 调整滑块位置使其居中于轨道 */
+    border-radius: 10px; /* 滑块圆角 */
+}
+
+.rc-slider-mark {
+    top: 26px; /* 刻度标记位置调整 */
+}
+
+.rc-slider-mark-text {
+    transform: rotate(45deg); /* 标记文字旋转 */
+    font-size: 10px; /* 标记文字大小 */
+    color: black; /* 标记文字颜色 */
+}
+
+/* 激活时的标记文字颜色 */
+/* .rc-slider-mark-text-active {
+    color: red !important; 
+} */
+
+
+.rc-slider-dot {
+    display: none; /* 隐藏滑块上的所有刻度点 */
+}

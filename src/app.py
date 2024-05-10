@@ -151,16 +151,23 @@ app2 = Dash(__name__)
 server = app2.server
 
 app2.layout = html.Div([
-    dcc.Slider(
-        id='hour-slider',
-        min=0,
-        max=23,
-        value=12,
-        marks={i: str(i) for i in range(24)},
-        step=1,
+    html.Div([
+        dcc.Slider(
+            id='hour-slider',
+            min=0,
+            max=23,
+            value=0,  # Default value is 0
+            marks={i: f'{i}h' for i in range(24)},  # Marks from 0h to 23h, every hour
+            step=1,  # Slider step is 1 hour
+        ),
+    ], style={'margin': '9px'}),
+    html.Link(
+        rel='stylesheet',
+        href='style.css'
     ),
-    dcc.Graph(id='median-miles-graph')
-])
+    dcc.Graph(id='median-miles-graph')  # Graph
+], style={'width': '600px', 'height': '400px'})  #   Adjust width and height here
+
 
 @app2.callback(
     Output('median-miles-graph', 'figure'),
