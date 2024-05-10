@@ -166,7 +166,8 @@ app2.layout = html.Div([
         href='style.css'
     ),
     dcc.Graph(id='median-miles-graph')  # Graph
-], style={'width': '600px', 'height': '400px'})  #   Adjust width and height here
+]#, style={'width': '600px', 'height': '400px'}
+)  #   Adjust width and height here
 
 
 @app2.callback(
