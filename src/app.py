@@ -21,6 +21,20 @@ import calendar
 import geopandas as gpd
 
 
+# Load the GeoJSON file
+geojson_file = 'Boundaries - Community Areas (current).geojson'  # Replace 'your_geojson_file.geojson' with the actual file path
+gdf = gpd.read_file(geojson_file)
+
+# Check the structure of the GeoDataFrame
+#print(gdf.head())
+
+# Extract community area information
+community_data = gdf[['area_numbe', 'community']].drop_duplicates()
+
+# Convert community data to a dictionary for mapping
+community = dict(zip(community_data['area_numbe'], community_data['community']))
+
+
 
 ### read the dataset
 #Define a list of URLs
